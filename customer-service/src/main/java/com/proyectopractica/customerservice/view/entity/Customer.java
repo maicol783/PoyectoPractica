@@ -1,5 +1,6 @@
 package com.proyectopractica.customerservice.view.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +25,7 @@ public class Customer {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "identification_type")
-    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+    @JsonIgnore
     private IdentificationType identificationType;
 
     @Size(min = 3, max = 50, message = "El tamaño del nombre debe tener entre 3 a 50 caracteres")

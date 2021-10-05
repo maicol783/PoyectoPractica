@@ -7,9 +7,6 @@ server:
 
 
 spring:
-  jackson:
-    serialization:
-      fail-on-empty-beans: false
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/clientdb
