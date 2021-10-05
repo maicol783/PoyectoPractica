@@ -3,6 +3,7 @@ package com.proyectopractica.customerservice.controller.controllers;
 import com.proyectopractica.customerservice.controller.services.CustomerServiceImp;
 import com.proyectopractica.customerservice.model.repository.CustomerRepository;
 import com.proyectopractica.customerservice.view.dto.CustomerDTO;
+import com.proyectopractica.customerservice.view.dto.util.ConverterDTO;
 import com.proyectopractica.customerservice.view.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
