@@ -6,10 +6,12 @@ import com.proyectopractica.customerservice.view.dto.util.ConverterDTO;
 import com.proyectopractica.customerservice.view.entity.Customer;
 import com.proyectopractica.customerservice.view.entity.IdentificationType;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @RequiredArgsConstructor
+@Service
 public class CustomerServiceImp implements CustomerService {
 
     private final CustomerRepository customerRepository;

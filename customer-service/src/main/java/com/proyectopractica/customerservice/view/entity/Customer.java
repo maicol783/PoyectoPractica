@@ -18,12 +18,12 @@ import javax.validation.constraints.Size;
 public class Customer {
     @Id
     @Size(min = 5, max = 15, message = "El tamaño del numero debe tener entre 5 a 15 caracteres")
-    @Column(name = "numero_identificacion", unique = true)
+    @Column(name = "identification_number", unique = true)
     private String identificationNumber;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tipo_identificacion")
+    @JoinColumn(name = "identification_type")
     @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     private IdentificationType identificationType;
 

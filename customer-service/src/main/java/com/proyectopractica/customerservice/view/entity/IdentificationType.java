@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
-@Table(name = "identificationType_tbl")
+@Table(name = "identification_type_tbl")
 @Entity
 public class IdentificationType {
     @Id
