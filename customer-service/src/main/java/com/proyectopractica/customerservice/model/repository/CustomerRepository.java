@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface CustomerRepository extends JpaRepository<Customer, String> {
     @Query("Select c from Customer c where c.age>=?1")
-    List<Customer> findByEdad(int edad);
+    List<Customer> findByAge(int age);
 
-    List<Customer> findByIdentificationTypeAndIdentificationNumber(IdentificationType identificationType, String identificationNumber);
+    Customer findByIdentificationTypeAndIdentificationNumber(IdentificationType identificationType, String identificationNumber);
 
 }

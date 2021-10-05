@@ -24,16 +24,16 @@ public class CustomerServiceImp implements CustomerService {
     }
 
     @Override
-    public List<CustomerDTO> findByEdad(int edad) {
-        List<Customer> customers = customerRepository.findByEdad(edad);
+    public List<CustomerDTO> findByAge(int age) {
+        List<Customer> customers = customerRepository.findByAge(age);
         List<CustomerDTO> customersDTO = ConverterDTO.convertToDtoList(customers);
         return customersDTO;
     }
 
     @Override
-    public List<CustomerDTO> findByIdentificationTypeAndIdentificationNumber(IdentificationType identificationType, String identificationNumber) {
-        List<Customer> customers = customerRepository.findByIdentificationTypeAndIdentificationNumber(identificationType, identificationNumber);
-        List<CustomerDTO> customersDTO = ConverterDTO.convertToDtoList(customers);
+    public CustomerDTO findByIdentificationTypeAndIdentificationNumber(IdentificationType identificationType, String identificationNumber) {
+        Customer customers = customerRepository.findByIdentificationTypeAndIdentificationNumber(identificationType, identificationNumber);
+        CustomerDTO customersDTO = ConverterDTO.convertToDto(customers);
         return customersDTO;
     }
 
